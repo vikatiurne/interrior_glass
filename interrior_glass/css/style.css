@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&family=Playfair+Display:wght@400;600;800&family=Revalia&family=Roboto:wght@400;500&display=swap');
+@import url('https://fontsforyou.com/fonts/t/Tahoma.ttf');
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Revalia', cursive;
+font-family: 'Roboto', sans-serif; */
+:root {
+  --color1: #161039;
+  --color2: #f0c269;
+  --color3: #e2a200;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  background: linear-gradient(
+    180deg,
+    #416283 14.51%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.container {
+  padding: 0 20px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* header */
+.header {
+  padding: 30px 0 93px;
+  background-image: url(../img/bg1.jpg);
+  max-width: 1440px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.menu {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  max-width: 762px;
+  width: 100%;
+}
+.list {
+  display: flex;
+}
+.list a {
+  margin-right: 74px;
+}
+.list a:last-child {
+  margin-right: 0;
+}
+.contacts {
+  margin-left: 194px;
+}
+.menu a {
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff;
+  text-shadow: 2px 4px 4px rgba(43, 42, 42, 0.5);
+}
+.burger {
+  width: 30px;
+  height: 30px;
+  display: none;
+  font-size: 20px;
+  color: white;
+  border: none;
+  background-color: transparent;
+}
+/* затемнение body при нажатии на бургер (не пойму как сделать что б меню не затемнялось!) */
+/* .bg_gray{
+  background-color: #161039;
+  opacity: 0.4;
+  transition: 0.2s ease-in;
+} */
+
+.header__title {
+  margin-bottom: 30px;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 46px;
+  line-height: 1.32;
+  max-width: 555px;
+  color: var(--color1);
+  text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.2);
+}
+.header__subtitle {
+  margin-bottom: 356px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.208;
+  color: var(--color1);
+}
+.buttons {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 946px;
+  width: 100%;
+}
+.button {
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 60px;
+  background: var(--color2);
+  border-radius: 30px;
+}
+.button a {
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #060606;
+  text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.2);
+}
+.icon-bar {
+  margin-bottom: 2px;
+  max-width: 267px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.icon-bar i {
+  font-size: 34px;
+  color: #1396f4;
+}
+.social {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.2;
+  color: var(--color2);
+  text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.2);
+}
+/* prodacts */
+.prodacts {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.prodacts__title {
+  margin-bottom: 90px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 1.325;
+  text-align: center;
+  color: var(--color1);
+  text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.2);
+}
+.prodacts__item {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.prodacts__item:last-child {
+  margin-bottom: 0;
+}
+.prodacts__item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+.prodacts__item:nth-child(odd) .prodact__img {
+  margin-right: 0;
+}
+.prodacts__item:nth-child(odd) .prodact__info {
+  margin-right: 50px;
+}
+.prodact__img {
+  margin-right: 50px;
+  max-width: 457px;
+  width: 100%;
+  filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 50px;
+}
+.prodact__info h3 {
+  margin-bottom: 30px;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.333;
+  color: var(--color1);
+  text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.2);
+}
+.prodact__info p {
+  margin-bottom: 30px;
+  font-family: 'Tahoma';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.095em;
+  color: #2d2c2c;
+}
+.prodact__link {
+  display: flex;
+  position: relative;
+}
+.prodact__link a {
+  text-decoration: none;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.69;
+  letter-spacing: 0.095em;
+  color: var(--color2);
+}
+.line1,
+.line2,
+.line3 {
+  position: absolute;
+  content: '';
+  border-radius: 1px;
+  background-color: var(--color2);
+}
+.line1 {
+  top: 13px;
+  left: 230px;
+  width: 35px;
+  height: 2px;
+}
+.line2,
+.line3 {
+  left: 245px;
+  width: 20px;
+  height: 2px;
+}
+.line2 {
+  top: 10px;
+  transform: rotate(15deg);
+}
+.line3 {
+  top: 16px;
+  transform: rotate(-20deg);
+}
+.line_dark-yellow {
+  background-color: var(--color3);
+}
+/* footer */
+.footer {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #e7eaed;
+}
+.footer__item-title {
+  margin-bottom: 3px;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  color: #161039;
+  text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.2);
+}
+.footer__item-title::after {
+  margin: 3px auto 15px;
+  display: block;
+  content: '';
+  width: 45px;
+  height: 1px;
+  background-color: #000000;
+}
+.footer__items {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__item-info ul,
+.footer__item-prodacrs ul,
+.footer__item-contacts ul {
+  padding-left: 20px;
+}
+/* accordion */
+.hide {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.accordion {
+  max-width: 132px;
+}
+.accordion__item {
+  position: relative;
+  width: 100%;
+}
+.accordion-item:last-child {
+  border-bottom: none;
+}
+.accordion__label {
+  margin-bottom: 12px;
+  width: 100%;
+  display: block;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.095em;
+  color: #000000;
+  text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.2);
+}
+.accordion__label:hover {
+  cursor: pointer;
+}
+.accordion__child {
+  margin: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  opacity: 0;
+  height: 0;
+  transform: scale(1, 0);
+  transform-origin: center top;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+input[type='checkbox']:checked ~ .accordion__child {
+  border: 1px solid #e0e0e0;
+  margin: 0 -20px 15px -20px;
+  background: #fff;
+  box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.16);
+  padding: 10px;
+  width: 350px;
+  height: auto;
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.footer__item-prodacrs a,
+.footer__item-contacts a {
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.095em;
+  color: #000000;
+  text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.2);
+}
+.footer__item-prodacrs li,
+.phone {
+  margin-bottom: 20px;
+}
+.footer__item-prodacrs li:last-child,
+.phone:last-child {
+  margin-bottom: 0;
+}
+.phone i {
+  margin-right: 10px;
+}
+.footer-down {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.footer-down p{
+  padding-right: 65px;
+  font-family: 'Playfair Display';
+}
+.arrow-up {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 114%;
+  color: #000000;
+  transition: all 3s ease-in;
+}
+.icon-up-circle {
+  margin-right: 10px;
+  font-size: 40px;
+}
+.copyright {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 10px;
+  letter-spacing: 0.095em;
+  color: #000000;
+  text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.2);
+}
+.scrollTop {
+  z-index: 999;
+  position: fixed;
+  bottom: 14px;
+  right: 47px;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  transition: 0.4s ease-in;
+}
+.show{
+  opacity: 1;
+}
